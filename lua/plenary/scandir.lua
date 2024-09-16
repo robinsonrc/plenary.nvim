@@ -313,9 +313,9 @@ local gen_date = (function()
   local current_year = os.date "%Y"
   return function(mtime)
     if current_year ~= os.date("%Y", mtime) then
-      return os.date("%b %d  %Y", mtime)
+      return os.date("%d %b  %Y", mtime)
     end
-    return os.date("%b %d %H:%M", mtime)
+    return os.date("%d %b %H:%M", mtime)
   end
 end)()
 
